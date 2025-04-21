@@ -11,12 +11,12 @@ app.get('/', (req, res) => {
 
 
 // This triggers the logic from stocks.js, need to make this my code...
-app.get('/stocksInsert', async (req, res) => {
+app.get('/stocksFind', async (req, res) => {
   try {
     const question2 = req.query.question2;
     const question1 = req.query.question1;
     console.log(question1, question2);
-    const run = require('./stocksInsert'); // import function
+    const run = require('./stocksFind'); // import function
     await run(); // run it
     //await run(question1, question2); // run it
     res.send('Stocks uploaded to MongoDB successfully!');
