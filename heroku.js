@@ -17,8 +17,8 @@ app.get('/stocksFind', async (req, res) => {
     const question1 = req.query.question1;
     //console.log(question1, question2);
     const run = require('./stocksFind'); // import function
-    await run(question1, question2); // run it
-    res.send('It worked - check the console!');
+    const results = await run(question1, question2); // run it
+    res.send(results);
   } catch (err) {
     console.error(err);
     res.status(500).send('Error uploading stocks.');
