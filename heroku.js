@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
 });
 
 
-// This triggers the logic from stocks.js
+// This triggers the logic from stocks.js, need to make this my code...
 app.get('/stocks', async (req, res) => {
   try {
     const runStockUpload = require('./stocks.js'); // import function
