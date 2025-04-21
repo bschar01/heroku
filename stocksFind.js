@@ -28,4 +28,4 @@ async function run(question1, question2) {
   }
 }
 
-run().catch(console.dir);
+module.exports = run;
