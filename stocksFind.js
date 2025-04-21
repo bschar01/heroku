@@ -9,7 +9,7 @@ async function run(question1, question2) {
     const database = client.db('Stocks');
     const productList = database.collection('Public Companies');
     let query;
-    if(question2 == "Company") {
+    if(question2 === "Company") {
       query = { Company: question1 };
     } else {
       query = { Ticker: question1 };
