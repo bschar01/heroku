@@ -9,6 +9,12 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html')); // Change the path as needed
 });
 
+// Handle GET requests to /stocks
+app.get('/stocks', (req, res) => {
+  // Here you can handle the form data or just send a response
+  res.send('You submitted the form!');  // Example response
+});
+
 // Listen for incoming requests
 app.listen(port, () => {
   console.log(`App running at http://localhost:${port}`);
