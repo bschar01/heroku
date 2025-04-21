@@ -14,6 +14,7 @@ async function run(question1, question2) {
     } else {
       query = { Ticker: question1 };
     }
+    console.log(query);
     const result = await productList.findOne(query);
 
     
