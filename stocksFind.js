@@ -21,7 +21,7 @@ async function run(question1, question2) {
     const result = await publicComp.find(query);
     const array_result = await result.toArray();
     
-    if(away_result.length > 0) {
+    if(array_result.length > 0) {
       console.log("Results of Query: " + array_result);
     } else {
       console.log("There isn't a product in the database that matches this search");
