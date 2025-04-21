@@ -27,8 +27,8 @@ async function run() {
     console.log("Yay - inserted");
 
   } finally {
-    await client.close();*/
+    await client.close();
   }
 }
 
-module.exports = run;
+//module.exports = run;*/
