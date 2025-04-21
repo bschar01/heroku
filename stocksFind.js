@@ -7,7 +7,7 @@ const client = new MongoClient(uri);
 async function run(question1, question2) {
   try {
     const database = client.db('Stocks');
-    const productList = database.collection('Public Companies');
+    const publicComp = database.collection('Public Companies');
     let query;
     if(question2 === "Company") {
       query = {Company: question1};
@@ -16,7 +16,7 @@ async function run(question1, question2) {
     }
     console.log(query);
     //const result = await productList.findOne(query);
-    const result = await productList.find({}).toArray();
+    const result = await publicComp.find({}).toArray();
 
 
     
