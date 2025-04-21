@@ -3,7 +3,7 @@ const { MongoClient } = require("mongodb");
 const uri = "mongodb+srv://bschar01:crosscountry%231@cluster0.k9kkhp0.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
 const client = new MongoClient(uri);
-
+let array_result = [];
 async function run(question1, question2) {
   try {
     await client.connect();
@@ -18,7 +18,7 @@ async function run(question1, question2) {
     }
     console.log(query);
     const result = await publicComp.find(query, { projection: { _id: 0 } });
-    const array_result = await result.toArray();
+    array_result = await result.toArray();
     
     if(array_result.length > 0) {
       console.log("Results of Query: ", array_result);
@@ -29,6 +29,7 @@ async function run(question1, question2) {
   } finally {
     await client.close();
   }
+  return array_result;
 }
 
 module.exports = run;
