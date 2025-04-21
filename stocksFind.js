@@ -6,7 +6,6 @@ const client = new MongoClient(uri);
 
 async function run() {
   try {
-    const question2 = req.query.question2;
     const database = client.db('Stocks');
     const productList = database.collection('Public Companies');
 
