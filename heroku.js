@@ -39,6 +39,11 @@ var http = require('http');
 var url = require('url');
 var port = process.env.PORT || 3000;
 //var port = 8080;   //uncomment to run local
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html')); // Change the path as needed
+});
+
 console.log("This goes to the console window");
 http.createServer(function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/html'});
