@@ -17,8 +17,7 @@ app.get('/stocksFind', async (req, res) => {
     const question1 = req.query.question1;
     console.log(question1, question2);
     const run = require('./stocksFind'); // import function
-    await run(); // run it
-    //await run(question1, question2); // run it
+    await run(question1, question2); // run it
     res.send('Stocks uploaded to MongoDB successfully!');
   } catch (err) {
     console.error(err);
