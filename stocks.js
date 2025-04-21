@@ -1,6 +1,5 @@
-console.log("Whatsupp bro");
 
-/*const { MongoClient } = require("mongodb");
+const { MongoClient } = require("mongodb");
 
 const uri = "mongodb+srv://bschar01:crosscountry%231@cluster0.k9kkhp0.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
@@ -31,4 +30,4 @@ async function run() {
   }
 }
 
-//module.exports = run;*/
+module.exports = run;
