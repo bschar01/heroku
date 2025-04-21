@@ -16,9 +16,8 @@ async function run(question1, question2) {
     } else {
       query = {Ticker: question1};
     }
-
     console.log(query);
-    const result = await publicComp.find(query);
+    const result = await publicComp.find(query, { projection: { _id: 0 } });
     const array_result = await result.toArray();
     
     if(array_result.length > 0) {
