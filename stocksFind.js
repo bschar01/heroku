@@ -8,15 +8,15 @@ async function run(question1, question2) {
   try {
     const database = client.db('Stocks');
     const productList = database.collection('Public Companies');
-
-    const query = { question2: question1 };
+    console.log(query);
+    /*const query = { question2: question1 };
     const result = await productList.findOne(query);
 
     if(result) {
       console.log(result);
     } else {
       console.log("There isn't a product in the database that matches this search");
-    }
+    } */
 
   } finally {
     await client.close();
