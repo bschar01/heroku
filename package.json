@@ -2,9 +2,9 @@
   "name": "heroku-html-app",
   "version": "1.0.0",
   "description": "Simple HTML app on Heroku",
-  "main": "app.js",
+  "main": "heroku.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node heroku.js"
   },
   "engines": {
     "node": ">=16.0.0"
