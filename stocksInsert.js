@@ -5,8 +5,7 @@ const uri = "mongodb+srv://bschar01:crosscountry%231@cluster0.k9kkhp0.mongodb.ne
 
 const client = new MongoClient(uri);
 
-async function run(const query = {}) {
-if(query == "Ben") {
+async function run() {
   try {
     await client.connect();
     const database = client.db('Stock');
@@ -28,7 +27,6 @@ if(query == "Ben") {
   } finally {
     await client.close();
   }
-}
 
 module.exports = run;
 }
