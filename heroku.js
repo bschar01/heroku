@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
 
 
 // This triggers the logic from stocks.js, need to make this my code...
-app.get('/stocksInsert', async (req, res) => {
+app.get('/stocksFind', async (req, res) => {
   try {
     const question2 = req.query.question2;
     const question1 = req.query.question1;
