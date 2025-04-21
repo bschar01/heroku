@@ -27,7 +27,7 @@ async function run() {
   } finally {
     await client.close();
   }
-
-module.exports = run;
 }
+module.exports = run;
+
   
