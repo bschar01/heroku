@@ -17,7 +17,7 @@ async function run(question1, question2) {
       query = {Ticker: question1};
     }
     console.log(query);
-    const result = await productList.findOne(query);
+    const result = await publicComp.findOne(query);
     //const result = await publicComp.find({}).toArray();
 
 
