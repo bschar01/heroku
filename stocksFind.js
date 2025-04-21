@@ -4,7 +4,7 @@ const uri = "mongodb+srv://bschar01:crosscountry%231@cluster0.k9kkhp0.mongodb.ne
 
 const client = new MongoClient(uri);
 
-async function run() {
+async function run(question1, question2) {
   try {
     const database = client.db('Stocks');
     const productList = database.collection('Public Companies');
