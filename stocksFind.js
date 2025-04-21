@@ -18,9 +18,6 @@ async function run(question1, question2) {
     }
     console.log(query);
     const result = await publicComp.findOne(query);
-    //const result = await publicComp.find({}).toArray();
-
-
     
     if(result) {
       console.log(result);
