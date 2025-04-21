@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
 app.get('/stocksInsert', async (req, res) => {
   try {
     const runStockUpload = require('./stocksInsert.js'); // import function
-    await runStockUpload(); // run it
+    await runStockUpload("Ben"); // run it
     res.send('Stocks uploaded to MongoDB successfully!');
   } catch (err) {
     console.error(err);
