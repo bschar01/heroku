@@ -10,10 +10,16 @@ app.get('/', (req, res) => {
 });
 
 
-// Handle GET requests to /stocks
-app.get('/stocks', (req, res) => {
-
-  res.send("Processed - check console"); // Send the result to the client
+// This triggers the logic from stocks.js
+app.get('/stocks', async (req, res) => {
+  try {
+    const runStockUpload = require('./stocks.js'); // import function
+    await runStockUpload(); // run it
+    res.send('Stocks uploaded to MongoDB successfully!');
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Error uploading stocks.');
+  }
 });
 
 
