@@ -14,10 +14,8 @@ async function run(question1, question2) {
     if(question2 === "Company") {
       query = {Company: question1};
     } else {
-      query = ({Ticker: question1};
+      query = {Ticker: question1};
     }
-    query+= ", {'company': 1, '_id': 0, 'ticker': 1, 'price': 1});
-    //db.coll.find({"x": 1}, {"actors": 1, "_id": 0})     // actors
 
     console.log(query);
     const result = await publicComp.find(query);
