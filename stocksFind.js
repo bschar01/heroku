@@ -10,9 +10,9 @@ async function run(question1, question2) {
     const productList = database.collection('Public Companies');
     let query;
     if(question2 === "Company") {
-      query = { Company: question1 };
+      query = {Company: question1};
     } else {
-      query = { Ticker: question1 };
+      query = {Ticker: question1};
     }
     console.log(query);
     const result = await productList.findOne(query);
