@@ -16,7 +16,7 @@ async function run(question1, question2) {
     }
     console.log(query);
     //const result = await productList.findOne(query);
-    const results = await productList.find({}).toArray();
+    const result = await productList.find({}).toArray();
 
 
     
