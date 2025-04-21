@@ -11,9 +11,9 @@ app.get('/', (req, res) => {
 
 
 // This triggers the logic from stocks.js, need to make this my code...
-app.get('/stocksDelete', async (req, res) => {
+app.get('/stocks', async (req, res) => {
   try {
-    const runStockUpload = require('./stocksDelete.js'); // import function
+    const runStockUpload = require('./stocks.js'); // import function
     await runStockUpload(); // run it
     res.send('Stocks uploaded to MongoDB successfully!');
   } catch (err) {
